@@ -1,0 +1,160 @@
+@import "../../styles/index";
+
+.banner {
+  position: relative;
+
+  &-container {
+    margin-top: 24px;
+  }
+
+  &-video__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-content {
+    &__header {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include smallScreen {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+
+    &__container {
+      margin-top: 24px;
+    }
+
+    &__top, &__bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include mobile {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__text {
+      flex: 1;
+      z-index: 1;
+      color: $white;
+      padding: 0 12px;
+      @include mobile {
+        flex: unset;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        order: 1;
+      }
+
+      .content-text {
+        text-align: center;
+        line-height: 30px;
+        font-size: $h5-font-size;
+        @include mobile {
+          font-size: $h5-font-size-mobile;
+          line-height: 25px;
+        }
+      }
+    }
+
+    &__image {
+      @include mobile {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+        &:nth-child(1) {
+          order: 2;
+        }
+        &:nth-child(3) {
+          order: 3;
+        }
+      }
+    }
+
+    &__bottom {
+      margin-top: 24px;
+    }
+
+    &__divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 24px;
+      width: 100%;
+      height: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &-image__item {
+    z-index: 1;
+    display: flex;
+
+    &:nth-child(2) {
+      justify-content: center;
+    }
+
+    &:nth-child(3) {
+      justify-content: flex-end;
+    }
+
+    &-border {
+      width: 100px;
+      height: 100px;
+      background: url("../../assets/shapes/imageBorder.png") no-repeat center;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+
+      img {
+        width: 94%;
+        height: 94%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@keyframes dividerMove {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -142,6 +142,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
+    z-index: 1;
 }
 
 code {

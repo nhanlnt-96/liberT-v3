@@ -1,5 +1,19 @@
+@import "./index";
+
 .app {
+  background-color: #000000;
+  @include desktop {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+  @include wide-desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.banner {
   padding-left: 0;
   padding-right: 0;
-  background-color: #000000;
+  padding-bottom: 24px;
 }
