@@ -104,16 +104,16 @@ const MintBox = () => {
     getData();
   }, [blockchain.account]);
   return (
-    <ResponsiveWrapper flex={1} style={{padding: 24}} test>
+    <ResponsiveWrapper flex={1}
+                       test>
       <s.Container
         flex={2}
         jc={"center"}
         ai={"center"}
         style={{
-          backgroundColor: "var(--accent)",
+          backgroundColor: "rgba(225,225,225,.3)",
           padding: 24,
           borderRadius: 24,
-          border: "4px dashed var(--secondary)",
           boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
         }}
       >
@@ -193,29 +193,6 @@ const MintBox = () => {
                 >
                   Connect to the {CONFIG.NETWORK.NAME} network
                 </s.TextDescription>
-                <s.SpacerSmall/>
-                <StyledButton
-                  onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(connect());
-                    getData();
-                  }}
-                >
-                  CONNECT
-                </StyledButton>
-                {blockchain.errorMsg !== "" ? (
-                  <>
-                    <s.SpacerSmall/>
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                        color: "var(--accent-text)",
-                      }}
-                    >
-                      {blockchain.errorMsg}
-                    </s.TextDescription>
-                  </>
-                ) : null}
               </s.Container>
             ) : (
               <>

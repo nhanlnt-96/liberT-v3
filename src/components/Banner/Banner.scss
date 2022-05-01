@@ -117,6 +117,32 @@
         display: none;
       }
     }
+
+    &__connect__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 24px;
+
+      .btn-item {
+        color: $black;
+        font-size: $font-size-large;
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        border: none;
+        outline: none;
+        padding: 16px 48px;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        background: #bdc3c7;
+        background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+        background: linear-gradient(to right, #2c3e50, #bdc3c7);
+        transition: $transition;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
   }
 
   &-image__item {

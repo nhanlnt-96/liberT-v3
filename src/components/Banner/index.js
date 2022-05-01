@@ -8,8 +8,20 @@ import BannerImage2 from "../../assets/imgs/banner/img2.png";
 import BannerImage3 from "../../assets/imgs/banner/img3.png";
 import BannerImage4 from "../../assets/imgs/banner/img4.png";
 import Divider from "../../assets/gifs/dividerLine.gif";
+import {connect} from "../../redux/blockchain/blockchainActions";
+import {fetchData} from "../../redux/data/dataActions";
+import {useDispatch, useSelector} from "react-redux";
+import ToastNotification from "../ToastNotification";
+import MintBox from "../MintBox";
 
 const Banner = () => {
+  const dispatch = useDispatch();
+  const blockchain = useSelector((state) => state.blockchain);
+  const getData = () => {
+    if (blockchain.account !== "" && blockchain.smartContract !== null) {
+      dispatch(fetchData(blockchain.account));
+    }
+  };
   return (
     <Container fluid className="banner">
       <Header/>
@@ -81,7 +93,22 @@ const Banner = () => {
             </div>
           </div>
         </div>
+        <div className="banner-content__connect__btn">
+          {
+            blockchain.account ? (
+              <MintBox/>
+            ) : (
+              <button className="btn-item" onClick={(e) => {
+                e.preventDefault();
+                dispatch(connect());
+                getData();
+              }}>connect wallet
+              </button>
+            )
+          }
+        </div>
       </Container>
+      <ToastNotification errorMsg={blockchain.errorMsg}/>
     </Container>
   );
 };
