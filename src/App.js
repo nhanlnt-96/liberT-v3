@@ -1,11 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/App.scss";
 import React from "react";
-import MintBox from "./components/MintBox";
-
+import Header from "./components/Header";
+import {Container} from "react-bootstrap";
 
 function App() {
   return (
-    <MintBox/>
+    <Container className="app" fluid>
+      <Header/>
+    </Container>
   );
 }
 
