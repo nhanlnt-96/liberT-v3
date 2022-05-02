@@ -7,6 +7,7 @@ import BannerImage1 from "../../assets/imgs/banner/img1.png";
 import BannerImage2 from "../../assets/imgs/banner/img2.png";
 import BannerImage3 from "../../assets/imgs/banner/img3.png";
 import BannerImage4 from "../../assets/imgs/banner/img4.png";
+import ImageBottom from "../../assets/imgs/banner/imageBottom.png";
 import Divider from "../../assets/gifs/dividerLine.gif";
 import {connect} from "../../redux/blockchain/blockchainActions";
 import {fetchData} from "../../redux/data/dataActions";
@@ -33,8 +34,11 @@ const Banner = () => {
           {
             [BannerImage1, BannerImage2, BannerImage3].map((val, index) => (
               <div key={index} className="banner-image__item">
-                <div className="banner-image__item-border">
-                  <img src={val} alt=""/>
+                <div className="banner-image__item__container">
+                  <div className="banner-image__item-border">
+                    <img src={val} alt=""/>
+                  </div>
+                  <img src={ImageBottom} alt="" className="image-bottom"/>
                 </div>
               </div>
             ))
@@ -44,8 +48,11 @@ const Banner = () => {
           <div className="banner-content__top">
             <div className="banner-content__image">
               <div className="banner-image__item">
-                <div className="banner-image__item-border">
-                  <img src={BannerImage4} alt=""/>
+                <div className="banner-image__item__container">
+                  <div className="banner-image__item-border">
+                    <img src={BannerImage4} alt=""/>
+                  </div>
+                  <img src={ImageBottom} alt="" className="image-bottom"/>
                 </div>
               </div>
             </div>
@@ -61,8 +68,11 @@ const Banner = () => {
             </div>
             <div className="banner-content__image">
               <div className="banner-image__item">
-                <div className="banner-image__item-border">
-                  <img src={BannerImage1} alt=""/>
+                <div className="banner-image__item__container">
+                  <div className="banner-image__item-border">
+                    <img src={BannerImage1} alt=""/>
+                  </div>
+                  <img src={ImageBottom} alt="" className="image-bottom"/>
                 </div>
               </div>
             </div>
@@ -70,8 +80,11 @@ const Banner = () => {
           <div className="banner-content__bottom">
             <div className="banner-content__image">
               <div className="banner-image__item">
-                <div className="banner-image__item-border">
-                  <img src={BannerImage2} alt=""/>
+                <div className="banner-image__item__container">
+                  <div className="banner-image__item-border">
+                    <img src={BannerImage2} alt=""/>
+                  </div>
+                  <img src={ImageBottom} alt="" className="image-bottom"/>
                 </div>
               </div>
             </div>
@@ -86,8 +99,11 @@ const Banner = () => {
             </div>
             <div className="banner-content__image">
               <div className="banner-image__item">
-                <div className="banner-image__item-border">
-                  <img src={BannerImage3} alt=""/>
+                <div className="banner-image__item__container">
+                  <div className="banner-image__item-border">
+                    <img src={BannerImage3} alt=""/>
+                  </div>
+                  <img src={ImageBottom} alt="" className="image-bottom"/>
                 </div>
               </div>
             </div>
