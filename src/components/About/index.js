@@ -6,10 +6,12 @@ import Divider from "../../assets/gifs/dividerLine.gif";
 import Arrow from "../../assets/gifs/arrow.gif";
 import Image from "../../assets/imgs/about/aboutImage.png";
 import {aboutContent} from "../../configs/aboutContent";
+import TriangleImage from "../../assets/shapes/triangleImage.png";
 
 const About = () => {
   return (
     <Container className="about" fluid>
+      <div className="bg-blur"/>
       <Title title={"about"}/>
       <Container className="about-container" fluid={"xxl"}>
         <div className="about-sub__title">
@@ -56,6 +58,30 @@ const About = () => {
                 the blockchain, putting ownership on a permanent record, making it impossible (or at least very hard) to
                 falsify.</p>
               <img src={Divider} alt=""/>
+            </div>
+            <div className="about-content__bottom__content">
+              <div className="about-content__bottom__content-item">
+                <h5 className="title">BUT WHY ARE NFTS IN SUCH HIGH DEMAND?</h5>
+                <div className="triangle-divider">
+                  <img src={TriangleImage} alt=""/>
+                  <img src={TriangleImage} alt=""/>
+                </div>
+                <p className="content">The majority of the NFTs you purchase is nothing but a digital certificate that
+                  you can't touch, wear or use in your everyday life.</p>
+              </div>
+              <img src={Divider} alt="" className="about-content__bottom__content__divider-mobile"/>
+              <div className="about-content__bottom__content-item">
+                <h5 className="title">WHAT IF YOU COULD? WHAT IF WEARABLE, & INTERACTABLE NFTS CAME INTO THE
+                  PICTURE?</h5>
+                <div className="triangle-divider">
+                  <img src={TriangleImage} alt=""/>
+                  <img src={TriangleImage} alt=""/>
+                </div>
+                <p className="content">Interactable & Wearable NFTs is doing just that, we're hear to change the game in
+                  more ways than you can imagine.</p>
+                <p className="content">Everything from custom clothing, jewelry, RC Models, gaming charactors and more
+                  is what you will find at I & W NFTs.</p>
+              </div>
             </div>
           </div>
         </div>
