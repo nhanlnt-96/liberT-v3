@@ -16,7 +16,7 @@ const Header = () => {
           <Nav className="me-auto header-menu">
             {
               headerMenu.map((val, index) => (
-                <Nav.Link keu={index} href={val.path} className="header-menu__item">{val.label}</Nav.Link>
+                <Nav.Link key={index} href={val.path} className="header-menu__item">{val.label}</Nav.Link>
               ))
             }
           </Nav>
