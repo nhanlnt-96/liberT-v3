@@ -23,20 +23,18 @@ const About = () => {
         <div className="about-content__top">
           {
             aboutContent.map((val, index) => (
-              <>
-                <div key={index} className="about-content__top__item">
-                  <div className="about-content__top__item-arrow">
-                    <img src={Arrow} alt=""/>
-                  </div>
-                  <h5 className="about-content__top__item-title">{val.title}</h5>
-                  <div className="about-content__top__item-image">
-                    <div className="about-content__top__item-image__border">
-                      <img src={val.image} alt=""/>
-                    </div>
-                  </div>
-                  <p className="about-content__top__item-text">{val.content}</p>
+              <div key={index} className="about-content__top__item">
+                <div className="about-content__top__item-arrow">
+                  <img src={Arrow} alt=""/>
                 </div>
-              </>
+                <h5 className="about-content__top__item-title">{val.title}</h5>
+                <div className="about-content__top__item-image">
+                  <div className="about-content__top__item-image__border">
+                    <img src={val.image} alt=""/>
+                  </div>
+                </div>
+                <p className="about-content__top__item-text">{val.content}</p>
+              </div>
             ))
           }
         </div>
