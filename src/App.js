@@ -5,6 +5,7 @@ import {Container} from "react-bootstrap";
 import Banner from "./components/Banner";
 import About from "./components/About";
 import Collections from "./components/Collections";
+import FirstBatch from "./components/FirstBatch";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Banner/>
       <About/>
       <Collections/>
+      <FirstBatch/>
     </Container>
   );
 }
